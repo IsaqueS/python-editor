@@ -17,4 +17,4 @@
 
 Consider adding the new venv created by uv to your vscode (Requires python extencion) by settings by pressing `CTRL + SHIFT + P` and typing `Select interpreter`.
 
-VSCode Debug settings included
+VSCode Debug settings included.
