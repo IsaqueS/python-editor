@@ -1,0 +1,6 @@
+Trabalho é um interpretador python, online.
+
+Funcionalidades:
+    1. Executar código Python
+    2. Destaque de sintaxe
+    3. 

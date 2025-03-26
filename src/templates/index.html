@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Editor de Python Online</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <link rel="icon" href="{{ url_for('static', filename='Assets/python.png') }}" type="image/x-icon">
+    </head>
+    <body class="center-text">
+        
+        <h1>
+            Editor de Python Online
+        </h1>
+        <h2>
+            Trabalho de: Isaque Sebold de Almeida e Thiago Coutinho da Silva
+        </h2>
+        <h3>
+            Tecnologias usada: Python + Flask, HTML + CSS + JS
+        </h3>
+        <h4>
+            Funcionalidades:
+            <ol>
+                <li>Executar código Python</li>
+                <li>Destaque de sintaxe</li>
+                <li>Salvar scripts no servidor</li>
+                <li>Desafios de algorítimos/Tutoriais</li>
+            </ol>
+        </h4>
+        <img src="{{ url_for('static', filename='Assets/python.png') }}", alt="Cool img" width="400" class="image-shadow" >
+    </body>
+</html>
