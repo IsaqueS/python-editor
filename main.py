@@ -1,9 +1,9 @@
-from src.app import *
+from flask import Flask, render_template
 
-def main():
-    print("Starting Server...")
-    app.run(host="0.0.0.0", port=80)
+app = Flask(__name__)
 
+@app.route("/")
+def hello_world() -> str:
+    return render_template("index.html")
 
-if __name__ == "__main__":
-    main()
+app.run(host="0.0.0.0", port=80)
