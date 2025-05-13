@@ -1,21 +1,32 @@
 @font-face {
     font-family: "Chakra";
-    src: url("Assets/ChakraPetch-Bold.ttf") format("truetype");
+    src: url("assets/SiteFont.ttf") format("truetype");
+}
+
+.center {
+    display: block;
+    align-content: center;
+    height: auto;
 }
 
 body {
+    font-family: "Chakra", sans-serif !important;
+}
+
+/* body {
     background-color: gray;
     background-image: url("Assets/tile.png");
     background-size: 100px 100px;
     font-family: "Chakra";
     color:white;
-    /* text-shadow: 4px 4px 0px black; */
+    text-shadow: 4px 4px 0px black;
     text-shadow: 
-          0px 0px 10px black,   /* Inner glow */
-          0px 0px 20px black,   /* Larger outer shadow */
-          0px 0px 40px black;   /* Even larger shadow! */
+          0px 0px 10px black,   
+          0px 0px 20px black,
+          0px 0px 40px black;
     
-}
+} 
+*/
 
 .center-text {
     text-align: center;

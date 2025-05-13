@@ -11,10 +11,10 @@
 ### How to host the app
 
 1. Install uv in your global python: `pip install uv`
-2. On the project folder run: `uv run main.py`
+2. On the project folder run: `uv run app.py`
 
 #### Bonus:
 
-Consider adding the new venv created by uv to your vscode (Requires python extencion) by settings by pressing `CTRL + SHIFT + P` and typing `Select interpreter`.
+Consider adding the new venv created by uv to your vscode (Requires python extension) by settings by pressing `CTRL + SHIFT + P` and typing `Select interpreter`.
 
 VSCode Debug settings included.
