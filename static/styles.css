@@ -3,10 +3,28 @@
     src: url("assets/SiteFont.ttf") format("truetype");
 }
 
-.center {
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        /* offset-position: 0px -1000px; */
+    }
+
+    100% {
+        opacity: 1;
+        /* offset-position: initial; */
+    }
+}
+
+.initial-page-message {
     display: block;
     align-content: center;
-    height: 100%
+    height: 100%;
+
+    /*  Não modificar o código abaixo */
+
+    background-color: #dffeff;
+    animation-name: fadein;
+    animation-duration: 1s;
 }
 
 body {
