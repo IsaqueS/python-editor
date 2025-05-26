@@ -14,19 +14,20 @@
         /* offset-position: initial; */
     }
 }
-
 .initial-page-message {
-    display: block;
-    align-content: center;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 700px;
+    padding-top: 50px;
 
-    /*  Não modificar o código abaixo */
+    /* Não modificar o código abaixo */
 
-    background-color: #dffeff;
+    /* background-color: #dffeff; */
     animation-name: fadein;
     animation-duration: 1s;
 }
-
 body {
     font-family: "Chakra", sans-serif !important;
 }
