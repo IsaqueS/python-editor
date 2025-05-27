@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "Chakra";
+    src: url("assets/SiteFont.ttf") format("truetype");
+}
+
+
+body {
+    font-family: "Chakra", sans-serif !important;
+}

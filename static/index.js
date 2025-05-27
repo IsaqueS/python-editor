@@ -15,3 +15,7 @@ ready(() => {
     console.log("The DOM is fully loaded, and I am ready to go!");
     // Add your custom code here
 });
+
+function createAccountButton() {
+    window.location.href = window.location.origin + "/create_account"
+}
