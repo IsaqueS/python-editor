@@ -19,3 +19,7 @@ ready(() => {
 function createAccountButton() {
     window.location.href = window.location.origin + "/create_account"
 }
+
+function loginButton() {
+    window.location.href = window.location.origin + "/login"
+}

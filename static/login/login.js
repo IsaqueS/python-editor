@@ -1,6 +1,6 @@
 const loginInputs = []
 const passwordInputs = []
-const finalElement = document.getElementById("create-account-button")
+const finalElement = document.getElementById("login-button")
 
 for (input of document.querySelectorAll('input')) {
     // console.log(input)
@@ -24,14 +24,14 @@ function validateAllInputs() {
         password: null
     }
 
-    let passwords = new Map()
+    // let passwords = new Map()
 
     for (inputId of loginInputs) {
         let input = document.getElementById(inputId)
         // console.log(inputId)
         
         if (passwordInputs.includes(inputId)) {
-            passwords.set(input.value, (passwords.get(input.value) || 0) + 1)
+            // passwords.set(input.value, (passwords.get(input.value) || 0) + 1)
             loginInfo.password = input.value
         } else if (input.dataset.check == "email") {
             if (input.value.includes("@")) {
@@ -42,14 +42,14 @@ function validateAllInputs() {
         }
     }
 
-    if (passwords.size > 1) {
-        return "As senhas são diferentes"
-    }
+    // if (passwords.size > 1) {
+    //     return "As senhas são diferentes"
+    // }
 
     return loginInfo
 }
 
-function createAccount() {
+function login() {
     let result = validateAllInputs()
 
     if (typeof result === "string") {
