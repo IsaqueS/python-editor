@@ -35,7 +35,7 @@ function validateAllInputs() {
             loginInfo.password = input.value
         } else if (input.dataset.check == "email") {
             if (input.value.includes("@")) {
-                loginInfo.email = input.value
+                loginInfo.email = input.value.toLowerCase()
             } else {
                 return "Email está incorreto."
             }
