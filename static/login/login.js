@@ -49,7 +49,7 @@ function validateAllInputs() {
     return loginInfo
 }
 
-function login() {
+async function login() {
     let result = validateAllInputs()
 
     if (typeof result === "string") {
@@ -57,8 +57,32 @@ function login() {
         return false
     }
 
-    console.log("Called")
-    console.log(JSON.stringify(result))
+    // console.log("Trying to send to the server...")
+    // console.log(JSON.stringify(result))
+
+    try {
+        const response = await fetch("/login/data/", 
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(result)
+            }
+        )
+
+        if (!response.ok) {
+            throw new Error(`HTTP ERROR: ${response.status}`)
+        }
+
+        const responseData = await response.json()
+
+        console.log(responseData)
+
+
+    } catch (error) {
+        console.error(error.message)
+    }
 }
 
 function validateInput(id) {
