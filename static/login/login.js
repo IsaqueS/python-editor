@@ -59,7 +59,7 @@ async function login() {
 
     // console.log("Trying to send to the server...")
     // console.log(JSON.stringify(result))
-
+    
     try {
         const response = await fetch("/login/data/", 
             {
@@ -70,14 +70,31 @@ async function login() {
                 body: JSON.stringify(result)
             }
         )
-
-        if (!response.ok) {
-            throw new Error(`HTTP ERROR: ${response.status}`)
-        }
-
+        
         const responseData = await response.json()
 
+        if (!response.ok) {
+            if (response.status == 401) {
+                if (responseData["status"] == "account-not-found") {
+                    console.log("NOT FOUND")
+                    alert("Email ou senha estão erradas")
+                }
+                
+                return
+            }
+        }
+
+        
+
         console.log(responseData)
+
+        const date = new Date()
+
+        date.setMonth(date.getMonth() + 1)
+
+        const expires = "expires=" + date.toUTCString()
+
+        document.cookie = `token=${responseData["token"]}; ` + expires + "; path=/; SameSite=Lax"
 
 
     } catch (error) {

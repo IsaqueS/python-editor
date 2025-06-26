@@ -60,7 +60,7 @@ async function createAccount() {
     // console.log(JSON.stringify(result))
 
     try {
-        const response = await fetch("/login/data/", 
+        const response = await fetch("/create_account/data/", 
             {
                 method: "POST",
                 headers: {
