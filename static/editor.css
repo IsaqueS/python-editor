@@ -1,0 +1,22 @@
+.code-editor {
+    font-family: monospace;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    resize: none;
+    height: calc(100vh - 250px);
+}
+
+#output-console {
+    background-color: #212529;
+    color: #f8f9fa;
+    border-radius: 0.25rem;
+    min-height: calc(100vh - 210px);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.nav-tabs .nav-link {
+    cursor: pointer;
+}

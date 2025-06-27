@@ -88,13 +88,7 @@ async function login() {
 
         console.log(responseData)
 
-        const date = new Date()
-
-        date.setMonth(date.getMonth() + 1)
-
-        const expires = "expires=" + date.toUTCString()
-
-        document.cookie = `token=${responseData["token"]}; ` + expires + "; path=/; SameSite=Lax"
+        storeToken(responseData["token"])
 
 
     } catch (error) {
@@ -136,4 +130,5 @@ function validateInput(id) {
 
 // console.log(loginInputs)
 // console.log(loginInputs[0].dataset.check)
-console.log(passwordInputs)
+// console.log(passwordInputs)
+console.log("Login loaded")

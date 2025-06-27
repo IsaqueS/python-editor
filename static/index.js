@@ -23,3 +23,14 @@ function createAccountButton() {
 function loginButton() {
     window.location.href = window.location.origin + "/login"
 }
+
+function openEditor() {
+    const id = getCookie("token")
+    // console.log("CALLED")
+    // console.log(id)
+    if (id === null) {
+        window.location.href = window.location.origin + "/login"
+    } else {
+        window.location.href = window.location.origin + "/editor?id=" + id
+    }
+}
